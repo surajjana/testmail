@@ -11,6 +11,12 @@ app.use(bodyParser());
 
 app.set('port', (process.env.PORT || 5000));
 
+app.get('/', function (request, response) {
+
+	response.send("Testing...");
+
+});
+
 app.post('/login', function (request, response) {
 
   var usn = request.body['usn'];
